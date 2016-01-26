@@ -15,7 +15,7 @@
 .csslider1 {
   display: inline-block;
   position: relative;
-  max-width: 640px;
+  max-width: 1024px;
   
   
 
@@ -166,23 +166,23 @@
 
 .csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num3,
 .csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num1 {
-  -webkit-animation: arrow1 25200ms infinite -2000ms;
-  animation: arrow1 25200ms infinite -2000ms;
+  -webkit-animation: arrow1 19600ms infinite -2000ms;
+  animation: arrow1 19600ms infinite -2000ms;
 }
 .csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num0,
 .csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num2 {
-  -webkit-animation: arrow1 25200ms infinite 4300ms;
-  animation: arrow1 25200ms infinite 4300ms;
+  -webkit-animation: arrow1 19600ms infinite 2900ms;
+  animation: arrow1 19600ms infinite 2900ms;
 }
 .csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num1,
 .csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num3 {
-  -webkit-animation: arrow1 25200ms infinite 10600ms;
-  animation: arrow1 25200ms infinite 10600ms;
+  -webkit-animation: arrow1 19600ms infinite 7800ms;
+  animation: arrow1 19600ms infinite 7800ms;
 }
 .csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num2,
 .csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num0 {
-  -webkit-animation: arrow1 25200ms infinite 16900ms;
-  animation: arrow1 25200ms infinite 16900ms;
+  -webkit-animation: arrow1 19600ms infinite 12700ms;
+  animation: arrow1 19600ms infinite 12700ms;
 }
 
 
@@ -222,7 +222,7 @@
   opacity: 0;
   z-index: 1;
   line-height: 0;
-  left: -42.5px;
+  left: -32px;
   top: -48px;
 }
 .csslider1 > .cs_bullets > label > .cs_thumb > img {
@@ -297,26 +297,26 @@
 .csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num0 {
   opacity: 0;
   z-index: -1;
-  -webkit-animation: pauseChange1 25200ms infinite -2000ms;
-  animation: pauseChange1 25200ms infinite -2000ms;
+  -webkit-animation: pauseChange1 19600ms infinite -2000ms;
+  animation: pauseChange1 19600ms infinite -2000ms;
 }
 .csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num1 {
   opacity: 0;
   z-index: -1;
-  -webkit-animation: pauseChange1 25200ms infinite 4300ms;
-  animation: pauseChange1 25200ms infinite 4300ms;
+  -webkit-animation: pauseChange1 19600ms infinite 2900ms;
+  animation: pauseChange1 19600ms infinite 2900ms;
 }
 .csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num2 {
   opacity: 0;
   z-index: -1;
-  -webkit-animation: pauseChange1 25200ms infinite 10600ms;
-  animation: pauseChange1 25200ms infinite 10600ms;
+  -webkit-animation: pauseChange1 19600ms infinite 7800ms;
+  animation: pauseChange1 19600ms infinite 7800ms;
 }
 .csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num3 {
   opacity: 0;
   z-index: -1;
-  -webkit-animation: pauseChange1 25200ms infinite 16900ms;
-  animation: pauseChange1 25200ms infinite 16900ms;
+  -webkit-animation: pauseChange1 19600ms infinite 12700ms;
+  animation: pauseChange1 19600ms infinite 12700ms;
 }
 
 
@@ -330,66 +330,103 @@
 /* ------------- /General Play Pause ------------- */
 
 /* ------------- Effect ------------- */
-
-.csslider1 > #cs_slide1_0:checked ~ ul > .slide.num0,
-.csslider1 > #cs_pause1_0:checked ~ ul > .slide.num0,
-.csslider1 > #cs_slide1_1:checked ~ ul > .slide.num1,
-.csslider1 > #cs_pause1_1:checked ~ ul > .slide.num1,
-.csslider1 > #cs_slide1_2:checked ~ ul > .slide.num2,
-.csslider1 > #cs_pause1_2:checked ~ ul > .slide.num2,
-.csslider1 > #cs_slide1_3:checked ~ ul > .slide.num3,
-.csslider1 > #cs_pause1_3:checked ~ ul > .slide.num3 {
-  opacity: 1;
-  z-index: 2;
+.csslider1 > ul > .slide.num0 {
+  left: 0%;
 }
+.csslider1 > ul > .slide.num1 {
+  left: 100%;
+}
+.csslider1 > ul > .slide.num2 {
+  left: 200%;
+}
+.csslider1 > ul > .slide.num3 {
+  left: 300%;
+}
+ 
+
+
+.csslider1 > #cs_slide1_0:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_0:checked ~ ul > .slide {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+}
+.csslider1 > #cs_slide1_1:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_1:checked ~ ul > .slide {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.csslider1 > #cs_slide1_2:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_2:checked ~ ul > .slide {
+  -webkit-transform: translateX(-200%);
+  transform: translateX(-200%);
+}
+.csslider1 > #cs_slide1_3:checked ~ ul > .slide,
+.csslider1 > #cs_pause1_3:checked ~ ul > .slide {
+  -webkit-transform: translateX(-300%);
+  transform: translateX(-300%);
+}
+ 
+
 
 .csslider1 > ul > .slide {
-  display: inline-block;
   position: absolute;
-  left: 0;
   top: 0;
-  opacity: 0;
-  z-index: 1;
-  
-  -webkit-transition: opacity 2000ms ease;
-  transition: opacity 2000ms ease;
+  left: 0;
+  display: inline-block;
+  opacity: 1;
+
+  -webkit-transition: -webkit-transform 2000ms;
+  transition: -webkit-transform 2000ms, transform 2000ms;
 
   
-  -webkit-transform: rotate(0deg);
-  transform: rotate(0deg);
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
 
 
-@-webkit-keyframes fade1 {
-  0%, 32.93650793650794%, 100%  { opacity: 0; }
-  7.936507936507937%, 25%  { opacity: 1; }
-  0%, 24.999%  { z-index: 2; }
-  25.001%, 100%  { z-index: 1; }
+
+@-webkit-keyframes slide1 {
+  0%, 14.795918367346939%  { -webkit-transform: translateX(0%); transform: translateX(0%); }
+  25%, 39.79591836734694%  { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+  50%, 64.79591836734694%  { -webkit-transform: translateX(-200%); transform: translateX(-200%); }
+  75%, 89.79591836734694%  { -webkit-transform: translateX(-300%); transform: translateX(-300%); }
+  
 }
-@keyframes fade1 {
-  0%, 32.93650793650794%, 100%  { opacity: 0; }
-  7.936507936507937%, 25%  { opacity: 1; }
-  0%, 24.999%  { z-index: 2; }
-  25.001%, 100%  { z-index: 1; }
+@keyframes slide1 {
+  0%, 14.795918367346939%  { -webkit-transform: translateX(0%); transform: translateX(0%); }
+  25%, 39.79591836734694%  { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+  50%, 64.79591836734694%  { -webkit-transform: translateX(-200%); transform: translateX(-200%); }
+  75%, 89.79591836734694%  { -webkit-transform: translateX(-300%); transform: translateX(-300%); }
+  
 }
 
-.csslider1 > #cs_play1:checked ~ ul > .slide.num0 {
-  -webkit-animation: fade1 25200ms infinite -2000ms;
-  animation: fade1 25200ms infinite -2000ms;
+@-webkit-keyframes slide1-ie {
+  0%, 14.795918367346939%  { margin-left: 0%; }
+  25%, 39.79591836734694%  { margin-left: -100%; }
+  50%, 64.79591836734694%  { margin-left: -200%; }
+  75%, 89.79591836734694%  { margin-left: -300%; }
+  
 }
-.csslider1 > #cs_play1:checked ~ ul > .slide.num1 {
-  -webkit-animation: fade1 25200ms infinite 4300ms;
-  animation: fade1 25200ms infinite 4300ms;
-}
-.csslider1 > #cs_play1:checked ~ ul > .slide.num2 {
-  -webkit-animation: fade1 25200ms infinite 10600ms;
-  animation: fade1 25200ms infinite 10600ms;
-}
-.csslider1 > #cs_play1:checked ~ ul > .slide.num3 {
-  -webkit-animation: fade1 25200ms infinite 16900ms;
-  animation: fade1 25200ms infinite 16900ms;
+@keyframes slide1-ie {
+  0%, 14.795918367346939%  { margin-left: 0%; }
+  25%, 39.79591836734694%  { margin-left: -100%; }
+  50%, 64.79591836734694%  { margin-left: -200%; }
+  75%, 89.79591836734694%  { margin-left: -300%; }
+  
 }
 
+.csslider1  > #cs_play1:checked ~ ul > .slide {
+  
+  -webkit-animation: slide1 19600ms infinite;
+  animation: slide1 19600ms infinite;
+  
+}
+/* IE 10+ hack - cant animate translate :( */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .csslider1  > #cs_play1:checked ~ ul > .slide {
+    animation: slide1-ie 19600ms infinite;
+  }
+}
 
 
 .csslider1 > #cs_play1:checked ~ ul > .slide,
@@ -702,23 +739,23 @@ _:-ms-input-placeholder, :root .csslider1 > .cs_play_pause > label span:after {
 
 .csslider1 > #cs_play1:checked ~ .cs_bullets > label.num0 > .cs_point,
 .csslider1 > #cs_pause1:checked ~ .cs_bullets > label.num0 > .cs_point {
-  -webkit-animation: bullet1 25200ms infinite -2000ms;
-  animation: bullet1 25200ms infinite -2000ms;
+  -webkit-animation: bullet1 19600ms infinite -2000ms;
+  animation: bullet1 19600ms infinite -2000ms;
 }
 .csslider1 > #cs_play1:checked ~ .cs_bullets > label.num1 > .cs_point,
 .csslider1 > #cs_pause1:checked ~ .cs_bullets > label.num1 > .cs_point {
-  -webkit-animation: bullet1 25200ms infinite 4300ms;
-  animation: bullet1 25200ms infinite 4300ms;
+  -webkit-animation: bullet1 19600ms infinite 2900ms;
+  animation: bullet1 19600ms infinite 2900ms;
 }
 .csslider1 > #cs_play1:checked ~ .cs_bullets > label.num2 > .cs_point,
 .csslider1 > #cs_pause1:checked ~ .cs_bullets > label.num2 > .cs_point {
-  -webkit-animation: bullet1 25200ms infinite 10600ms;
-  animation: bullet1 25200ms infinite 10600ms;
+  -webkit-animation: bullet1 19600ms infinite 7800ms;
+  animation: bullet1 19600ms infinite 7800ms;
 }
 .csslider1 > #cs_play1:checked ~ .cs_bullets > label.num3 > .cs_point,
 .csslider1 > #cs_pause1:checked ~ .cs_bullets > label.num3 > .cs_point {
-  -webkit-animation: bullet1 25200ms infinite 16900ms;
-  animation: bullet1 25200ms infinite 16900ms;
+  -webkit-animation: bullet1 19600ms infinite 12700ms;
+  animation: bullet1 19600ms infinite 12700ms;
 }
 
 
@@ -872,172 +909,172 @@ _:-ms-input-placeholder, :root .csslider1 > .cs_play_pause > label span:after {
 
 
 @-webkit-keyframes cs_title1 {
-  1.3194444444444444%, 23.670555555555552%  {
+  1.6964285714285714%, 23.29357142857143%  {
     opacity: 1;
     z-index: 2;
     visibility: visible;
     -webkit-transform: translateY(10px);
     transform: translateY(10px);
   }
-  1.8849206349206349%, 23.105079365079362%  {
+  2.423469387755102%, 22.566530612244897%  {
     opacity: 1;
     z-index: 2;
     visibility: visible;
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
   }
-  26.884920634920636%  {
+  27.4234693877551%  {
     opacity: 0;
     z-index: 2;
     visibility: hidden;
     -webkit-transform: translateY(-100px);
     transform: translateY(-100px);
   }
-  26.894920634920638%, 100%  { z-index: 0; }
+  27.433469387755103%, 100%  { z-index: 0; }
 }
 @keyframes cs_title1 {
-  1.3194444444444444%, 23.670555555555552%  {
+  1.6964285714285714%, 23.29357142857143%  {
     opacity: 1;
     z-index: 2;
     visibility: visible;
     -webkit-transform: translateY(10px);
     transform: translateY(10px);
   }
-  1.8849206349206349%, 23.105079365079362%  {
+  2.423469387755102%, 22.566530612244897%  {
     opacity: 1;
     z-index: 2;
     visibility: visible;
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
   }
-  26.884920634920636%  {
+  27.4234693877551%  {
     opacity: 0;
     z-index: 2;
     visibility: hidden;
     -webkit-transform: translateY(-100px);
     transform: translateY(-100px);
   }
-  26.894920634920638%, 100%  { z-index: 0; }
+  27.433469387755103%, 100%  { z-index: 0; }
 }
 
 
 @-webkit-keyframes cs_descr1 {
-  1.3194444444444444%, 23.670555555555552%  {
+  1.6964285714285714%, 23.29357142857143%  {
     opacity: 1;
     z-index: 1;
     visibility: visible;
     -webkit-transform: translateY(-10px);
     transform: translateY(-10px);
   }
-  1.8849206349206349%, 23.105079365079362%  {
+  2.423469387755102%, 22.566530612244897%  {
     opacity: 1;
     z-index: 1;
     visibility: visible;
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
   }
-  26.884920634920636%  {
+  27.4234693877551%  {
     opacity: 0;
     z-index: 1;
     visibility: hidden;
     -webkit-transform: translateY(100px);
     transform: translateY(100px);
   }
-  26.894920634920638%, 100%  { z-index: 0; }
+  27.433469387755103%, 100%  { z-index: 0; }
 }
 @keyframes cs_descr1 {
-  1.3194444444444444%, 23.670555555555552%  {
+  1.6964285714285714%, 23.29357142857143%  {
     opacity: 1;
     z-index: 1;
     visibility: visible;
     -webkit-transform: translateY(-10px);
     transform: translateY(-10px);
   }
-  1.8849206349206349%, 23.105079365079362%  {
+  2.423469387755102%, 22.566530612244897%  {
     opacity: 1;
     z-index: 1;
     visibility: visible;
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
   }
-  26.884920634920636%  {
+  27.4234693877551%  {
     opacity: 0;
     z-index: 1;
     visibility: hidden;
     -webkit-transform: translateY(100px);
     transform: translateY(100px);
   }
-  26.894920634920638%, 100%  { z-index: 0; }
+  27.433469387755103%, 100%  { z-index: 0; }
 }
 
 
 .csslider1 > #cs_play1:checked ~ .cs_description > .num0  > .cs_title {
-  -webkit-animation: cs_title1 25200ms infinite -1400ms ease;
-  animation: cs_title1 25200ms infinite -1400ms ease;
+  -webkit-animation: cs_title1 19600ms infinite -1400ms ease;
+  animation: cs_title1 19600ms infinite -1400ms ease;
 }
 .csslider1 > #cs_play1:checked ~ .cs_description > .num1  > .cs_title {
-  -webkit-animation: cs_title1 25200ms infinite 4900ms ease;
-  animation: cs_title1 25200ms infinite 4900ms ease;
+  -webkit-animation: cs_title1 19600ms infinite 3500ms ease;
+  animation: cs_title1 19600ms infinite 3500ms ease;
 }
 .csslider1 > #cs_play1:checked ~ .cs_description > .num2  > .cs_title {
-  -webkit-animation: cs_title1 25200ms infinite 11200ms ease;
-  animation: cs_title1 25200ms infinite 11200ms ease;
+  -webkit-animation: cs_title1 19600ms infinite 8400ms ease;
+  animation: cs_title1 19600ms infinite 8400ms ease;
 }
 .csslider1 > #cs_play1:checked ~ .cs_description > .num3  > .cs_title {
-  -webkit-animation: cs_title1 25200ms infinite 17500ms ease;
-  animation: cs_title1 25200ms infinite 17500ms ease;
+  -webkit-animation: cs_title1 19600ms infinite 13300ms ease;
+  animation: cs_title1 19600ms infinite 13300ms ease;
 }
 
 
 .csslider1 > #cs_play1:checked ~ .cs_description > .num0  > .cs_descr {
-  -webkit-animation: cs_descr1 25200ms infinite -1150ms ease;
-  animation: cs_descr1 25200ms infinite -1150ms ease;
+  -webkit-animation: cs_descr1 19600ms infinite -1150ms ease;
+  animation: cs_descr1 19600ms infinite -1150ms ease;
 }
 .csslider1 > #cs_play1:checked ~ .cs_description > .num1  > .cs_descr {
-  -webkit-animation: cs_descr1 25200ms infinite 5150ms ease;
-  animation: cs_descr1 25200ms infinite 5150ms ease;
+  -webkit-animation: cs_descr1 19600ms infinite 3750ms ease;
+  animation: cs_descr1 19600ms infinite 3750ms ease;
 }
 .csslider1 > #cs_play1:checked ~ .cs_description > .num2  > .cs_descr {
-  -webkit-animation: cs_descr1 25200ms infinite 11450ms ease;
-  animation: cs_descr1 25200ms infinite 11450ms ease;
+  -webkit-animation: cs_descr1 19600ms infinite 8650ms ease;
+  animation: cs_descr1 19600ms infinite 8650ms ease;
 }
 .csslider1 > #cs_play1:checked ~ .cs_description > .num3  > .cs_descr {
-  -webkit-animation: cs_descr1 25200ms infinite 17750ms ease;
-  animation: cs_descr1 25200ms infinite 17750ms ease;
+  -webkit-animation: cs_descr1 19600ms infinite 13550ms ease;
+  animation: cs_descr1 19600ms infinite 13550ms ease;
 }
 
 
 
 
 @-webkit-keyframes cs_title_text1 {
-  1.3194444444444444%, 23.670555555555552%  {
+  1.6964285714285714%, 23.29357142857143%  {
     opacity: 1;
     -webkit-transform: translateY(10px);
     transform: translateY(10px);
   }
-  1.8849206349206349%, 23.105079365079362%  {
+  2.423469387755102%, 22.566530612244897%  {
     opacity: 1;
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
   }
-  26.884920634920636%  {
+  27.4234693877551%  {
     opacity: 0;
     -webkit-transform: translateY(-100px);
     transform: translateY(-100px);
   }
 }
 @keyframes cs_title_text1 {
-  1.3194444444444444%, 23.670555555555552%  {
+  1.6964285714285714%, 23.29357142857143%  {
     opacity: 1;
     -webkit-transform: translateY(10px);
     transform: translateY(10px);
   }
-  1.8849206349206349%, 23.105079365079362%  {
+  2.423469387755102%, 22.566530612244897%  {
     opacity: 1;
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
   }
-  26.884920634920636%  {
+  27.4234693877551%  {
     opacity: 0;
     -webkit-transform: translateY(-100px);
     transform: translateY(-100px);
@@ -1046,34 +1083,34 @@ _:-ms-input-placeholder, :root .csslider1 > .cs_play_pause > label span:after {
 
 
 @-webkit-keyframes cs_descr_text1 {
-  1.3194444444444444%, 23.670555555555552%  {
+  1.6964285714285714%, 23.29357142857143%  {
     opacity: 1;
     -webkit-transform: translateY(-10px);
     transform: translateY(-10px);
   }
-  1.8849206349206349%, 23.105079365079362%  {
+  2.423469387755102%, 22.566530612244897%  {
     opacity: 1;
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
   }
-  26.884920634920636%  {
+  27.4234693877551%  {
     opacity: 0;
     -webkit-transform: translateY(100px);
     transform: translateY(100px);
   }
 }
 @keyframes cs_descr_text1 {
-  1.3194444444444444%, 23.670555555555552%  {
+  1.6964285714285714%, 23.29357142857143%  {
     opacity: 1;
     -webkit-transform: translateY(-10px);
     transform: translateY(-10px);
   }
-  1.8849206349206349%, 23.105079365079362%  {
+  2.423469387755102%, 22.566530612244897%  {
     opacity: 1;
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
   }
-  26.884920634920636%  {
+  27.4234693877551%  {
     opacity: 0;
     -webkit-transform: translateY(100px);
     transform: translateY(100px);
@@ -1082,38 +1119,38 @@ _:-ms-input-placeholder, :root .csslider1 > .cs_play_pause > label span:after {
 
 
 .csslider1 > #cs_play1:checked ~ .cs_description > .num0 .cs_title > .cs_wrapper {
-  -webkit-animation: cs_title_text1 25200ms infinite -1250ms ease;
-  animation: cs_title_text1 25200ms infinite -1250ms ease;
+  -webkit-animation: cs_title_text1 19600ms infinite -1250ms ease;
+  animation: cs_title_text1 19600ms infinite -1250ms ease;
 }
 .csslider1 > #cs_play1:checked ~ .cs_description > .num1 .cs_title > .cs_wrapper {
-  -webkit-animation: cs_title_text1 25200ms infinite 5050ms ease;
-  animation: cs_title_text1 25200ms infinite 5050ms ease;
+  -webkit-animation: cs_title_text1 19600ms infinite 3650ms ease;
+  animation: cs_title_text1 19600ms infinite 3650ms ease;
 }
 .csslider1 > #cs_play1:checked ~ .cs_description > .num2 .cs_title > .cs_wrapper {
-  -webkit-animation: cs_title_text1 25200ms infinite 11350ms ease;
-  animation: cs_title_text1 25200ms infinite 11350ms ease;
+  -webkit-animation: cs_title_text1 19600ms infinite 8550ms ease;
+  animation: cs_title_text1 19600ms infinite 8550ms ease;
 }
 .csslider1 > #cs_play1:checked ~ .cs_description > .num3 .cs_title > .cs_wrapper {
-  -webkit-animation: cs_title_text1 25200ms infinite 17650ms ease;
-  animation: cs_title_text1 25200ms infinite 17650ms ease;
+  -webkit-animation: cs_title_text1 19600ms infinite 13450ms ease;
+  animation: cs_title_text1 19600ms infinite 13450ms ease;
 }
 
 
 .csslider1 > #cs_play1:checked ~ .cs_description > .num0 .cs_descr > .cs_wrapper {
-  -webkit-animation: cs_descr_text1 25200ms infinite -1000ms ease;
-  animation: cs_descr_text1 25200ms infinite -1000ms ease;
+  -webkit-animation: cs_descr_text1 19600ms infinite -1000ms ease;
+  animation: cs_descr_text1 19600ms infinite -1000ms ease;
 }
 .csslider1 > #cs_play1:checked ~ .cs_description > .num1 .cs_descr > .cs_wrapper {
-  -webkit-animation: cs_descr_text1 25200ms infinite 5300ms ease;
-  animation: cs_descr_text1 25200ms infinite 5300ms ease;
+  -webkit-animation: cs_descr_text1 19600ms infinite 3900ms ease;
+  animation: cs_descr_text1 19600ms infinite 3900ms ease;
 }
 .csslider1 > #cs_play1:checked ~ .cs_description > .num2 .cs_descr > .cs_wrapper {
-  -webkit-animation: cs_descr_text1 25200ms infinite 11600ms ease;
-  animation: cs_descr_text1 25200ms infinite 11600ms ease;
+  -webkit-animation: cs_descr_text1 19600ms infinite 8800ms ease;
+  animation: cs_descr_text1 19600ms infinite 8800ms ease;
 }
 .csslider1 > #cs_play1:checked ~ .cs_description > .num3 .cs_descr > .cs_wrapper {
-  -webkit-animation: cs_descr_text1 25200ms infinite 17900ms ease;
-  animation: cs_descr_text1 25200ms infinite 17900ms ease;
+  -webkit-animation: cs_descr_text1 19600ms infinite 13700ms ease;
+  animation: cs_descr_text1 19600ms infinite 13700ms ease;
 }
 
 
